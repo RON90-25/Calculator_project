@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+}
+.background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff6b6b, #ffb84d, #33ccff, #9966ff);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    z-index: -1;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.container {
+    text-align: center;
+}
+.title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+.calculator {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.btn {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    width: 60px;
+    height: 60px;
+}
+.btn:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+.operator {
+    background: #ff8c00;
+}
+.operator:hover {
+    background: #ff6b00;
+}
+.equal {
+    background: #ff4757;
+}
+.equal:hover {
+    background: #ff1e40;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
